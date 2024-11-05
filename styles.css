@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+	height: auto;
 }
 
 header {
@@ -10,30 +11,36 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+	height: auto;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+	height: auto;
 }
 
 nav ul li {
     display: inline;
     margin: 0 1rem;
+	height: auto;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+	height: auto;
 }
 
 main {
     padding: 2rem;
 	background-color: #FAF6FF;
+	height: auto;
 }
 
 section {
     margin-bottom: 2rem;
+	height: auto;
 }
 
 footer {
@@ -44,6 +51,7 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+	height: auto;
 }
 img{
 max-width:100%, height: auto;}
