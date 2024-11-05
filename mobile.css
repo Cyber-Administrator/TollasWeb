@@ -1,3 +1,6 @@
+.thirty-percent {
+      width: 30%;
+    }
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -71,3 +74,8 @@ footer {
     bottom: 0;
 	height: auto;
 }
+img{
+	class="thirty-percent"
+}
+
+
