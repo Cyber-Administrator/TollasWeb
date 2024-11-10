@@ -43,9 +43,9 @@
                     const days = ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat"];
                     const today = new Date();
                     const dayName = days[today.getDay()];
-                    botMessage.innerHTML = `<strong>Bot:</strong> Ma ${dayName} van.`;
+                    botMessage.innerHTML = `<strong>AI:</strong> Ma ${dayName} van.`;
                 } else {
-                    botMessage.innerHTML = `<strong>Bot:</strong> Sajnos nem értem a kérdést. Próbáld újra!`;
+                    botMessage.innerHTML = `<strong>AI:</strong> Még fejlesztés alatt vagyok kérlek várj türelmesen`;
                 }
 
                 chatBox.appendChild(botMessage);
