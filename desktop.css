@@ -23,6 +23,15 @@ body {
     background-color: #f4f4f4;
 	height: auto;
 }
+table {
+	width: 50%; border-collapse: collapse; 
+} 
+table, th, td {
+	border: 1px solid black; 
+}
+th, td { 
+	padding: 10px; text-align: center;
+}
 
 header {
     background-color: #1720CC;
