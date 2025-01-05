@@ -9,10 +9,14 @@
         #protected-content {
             display: none;
         }
+        /* Rejtett üzenet */
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
-    <h1>Enter your username and password</h1>
+    <h1 id="login-header">Enter your username and password</h1>
     <form id="login-form" onsubmit="return checkCredentials()">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required><br><br>
@@ -27,6 +31,23 @@
     </div>
 
     <script>
+        // Az időzítő az inaktivitás figyelésére
+        let logoutTimer;
+
+        function resetTimer() {
+            clearTimeout(logoutTimer);
+            logoutTimer = setTimeout(logout, 600000); // 600000 milliszekundum = 10 perc
+        }
+
+        function logout() {
+            alert('Inactivity detected. You will be logged out.');
+            document.getElementById('protected-content').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+            document.getElementById('login-header').classList.remove('hidden');
+            document.onmousemove = null;
+            document.onkeypress = null;
+        }
+
         function checkCredentials() {
             var enteredUsername = document.getElementById('username').value;
             var enteredPasscode = document.getElementById('passcode').value;
@@ -36,6 +57,10 @@
             if (enteredUsername === correctUsername && enteredPasscode === correctPasscode) {
                 document.getElementById('protected-content').style.display = 'block';
                 document.getElementById('login-form').style.display = 'none';
+                document.getElementById('login-header').classList.add('hidden');
+                resetTimer();
+                document.onmousemove = resetTimer;
+                document.onkeypress = resetTimer;
             } else {
                 alert('Incorrect username or password entered!');
             }
