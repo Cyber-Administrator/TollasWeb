@@ -1,7 +1,9 @@
-table tr td {
+table td {
         border: 2px solid black;
         border-collapse: collapse; 
         }
+tr:hover {
+            background-color: #D3A3F7;
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
