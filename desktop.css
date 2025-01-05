@@ -3,7 +3,7 @@ table td {
         border-collapse: collapse; 
         }
 tr td:hover {
-            background-color: #D3A3F7;
+            background-color: #D3A3F7;}
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
