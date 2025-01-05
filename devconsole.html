@@ -1,45 +1,57 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Protected Page</title>
-    <style>
-        /* Optional: Hide the content by default */
-        #protected-content {
-            display: none;
-        }
-    </style>
+    <title>Login Required</title>
 </head>
 <body>
-    <h1>Enter Passcode to Access the Page</h1>
-    <form id="password-form">
-        <label for="passcode">Passcode:</label>
-        <input type="password" id="passcode" name="passcode" required>
-        <button type="submit">Submit</button>
-    </form>
-    <div id="protected-content">
-        <h1>Secret Development Page</h1>
-        <p>This is a hidden development page.</p>
-            <p><a href="DNAheart.html">Tester</a></p>
-            <p><a href="https://vercel.com/cyber-administrators-projects/tgse">DevPlatform</a></p>
-    </div>
-
+    <h1>Enter your username and your password </h1>
     <script>
-        document.getElementById('password-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the form from submitting
+        // Jelszó prompt automatikus megnyitása
+        window.onload = function() {
+            // Létrehozunk egy divet, ami felugró ablakot szimulál
+            var popup = window.open("", "popupWindow", "width=400,height=300,scrollbars=yes");
+            popup.document.write(`
+                <html>
+                <head>
+                    <title>Username and Password</title>
+                </head>
+                <body>
+                    <h1>Enter your username and your password</h1>
+                    <form id="login-form">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required><br><br>
+                        <label for="passcode">Password:</label>
+                        <input type="password" id="passcode" name="passcode" required><br><br>
+                        <button type="submit">Küldés</button>
+                    </form>
+                    <div id="protected-content" style="display:none;">
+                        <h1>Protected Site</h1>
+                        <p><a href="DNAheart.html">Tester</a></p>
+                        <p><a href="https://vercel.com/cyber-administrators-projects/tgse">DevPlatform</a></p>
+                    </div>
+                    <script>
+                        document.getElementById('login-form').addEventListener('submit', function(event) {
+                            event.preventDefault();
+                            var enteredUsername = document.getElementById('username').value;
+                            var enteredPasscode = document.getElementById('passcode').value;
+                            var correctUsername = 'Adam_Admin'; // Cseréld ki a felhasználónevet a sajátodra
+                            var correctPasscode = 'Adamo_user20081026'; // Cseréld ki a jelszót a sajátodra
 
-            const enteredPasscode = document.getElementById('passcode').value;
-            const correctPasscode = 'Adamo_user20081026'; // Replace with your actual passcode
-
-            if (enteredPasscode === correctPasscode) {
-                document.getElementById('protected-content').style.display = 'block';
-                document.getElementById('password-form').style.display = 'none';
-            } else {
-                alert('Incorrect passcode!');
-            }
-        });
+                            if (enteredUsername === correctUsername && enteredPasscode === correctPasscode) {
+                                document.getElementById('protected-content').style.display = 'block';
+                                document.getElementById('login-form').style.display = 'none';
+                            } else {
+                                alert('Incorrect username or password entered!');
+                            }
+                        });
+                    </script>
+                </body>
+                </html>
+            `);
+        };
     </script>
 </body>
 </html>
