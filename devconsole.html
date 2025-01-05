@@ -13,8 +13,7 @@
 </head>
 <body>
     <h1>Secret Development Page</h1>
-    <p><a href="DNAheart.html">Tester</a></p>
-    <p><a href="https://vercel.com/cyber-administrators-projects/tgse">DevPlatform</a></p>
+
     
     <script>
         // Basic authentication prompt
@@ -24,6 +23,54 @@
         } else {
             alert("Incorrect password!");
         }
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <style>
+        /* Optional: Hide the content by default */
+        #protected-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Passcode to Access the Page</h1>
+    <form id="password-form">
+        <label for="passcode">Passcode:</label>
+        <input type="password" id="passcode" name="passcode" required>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="protected-content">
+        <h1>Secret Development Page</h1>
+        <p>This is a hidden development page.</p>
+            <p><a href="DNAheart.html">Tester</a></p>
+            <p><a href="https://vercel.com/cyber-administrators-projects/tgse">DevPlatform</a></p>
+    </div>
+
+    <script>
+        document.getElementById('password-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            const enteredPasscode = document.getElementById('passcode').value;
+            const correctPasscode = 'Adamo_user20081026'; // Replace with your actual passcode
+
+            if (enteredPasscode === correctPasscode) {
+                document.getElementById('protected-content').style.display = 'block';
+                document.getElementById('password-form').style.display = 'none';
+            } else {
+                alert('Incorrect passcode!');
+            }
+        });
     </script>
 </body>
 </html>
