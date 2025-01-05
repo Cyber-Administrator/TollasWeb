@@ -2,7 +2,7 @@ table td {
         border: 2px solid black;
         border-collapse: collapse; 
         }
-tr:hover {
+tr td:hover {
             background-color: #D3A3F7;
 .grid-container {
   display: grid;
