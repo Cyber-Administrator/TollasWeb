@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Development Page</title>
+    <style>
+        /* Optional: Hide the page by default */
+        body {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Secret Development Page</h1>
+    <p><a href="heart.html">EstherEgg</a></p>
+    <script>
+        // Basic authentication prompt
+        var password = prompt("Enter the password to access this page:");
+        if (password === "Adamo_user20081026") {
+            document.body.style.display = "block";
+        } else {
+            alert("Incorrect password!");
+        }
+    </script>
+</body>
+</html>
