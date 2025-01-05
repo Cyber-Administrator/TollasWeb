@@ -1,57 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Required</title>
+    <style>
+        /* Alapértelmezés szerint rejtett tartalom */
+        #protected-content {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Enter your username and your password </h1>
-    <script>
-        // Jelszó prompt automatikus megnyitása
-        window.onload = function() {
-            // Létrehozunk egy divet, ami felugró ablakot szimulál
-            var popup = window.open("", "popupWindow", "width=400,height=300,scrollbars=yes");
-            popup.document.write(
-                <html>
-                <head>
-                    <title>Username and Password</title>
-                </head>
-                <body>
-                    <h1>Enter your username and your password</h1>
-                    <form id="login-form">
-                        <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" required><br><br>
-                        <label for="passcode">Password:</label>
-                        <input type="password" id="passcode" name="passcode" required><br><br>
-                        <button type="submit">Küldés</button>
-                    </form>
-                    <div id="protected-content" style="display:none;">
-                        <h1>Protected Site</h1>
-                        <p><a href="DNAheart.html">Tester</a></p>
-                        <p><a href="https://vercel.com/cyber-administrators-projects/tgse">DevPlatform</a></p>
-                    </div>
-                    <script>
-                        document.getElementById('login-form').addEventListener('submit', function(event) {
-                            event.preventDefault();
-                            var enteredUsername = document.getElementById('username').value;
-                            var enteredPasscode = document.getElementById('passcode').value;
-                            var correctUsername = 'Adam_Admin'; // Cseréld ki a felhasználónevet a sajátodra
-                            var correctPasscode = 'Adamo_user20081026'; // Cseréld ki a jelszót a sajátodra
+    <h1>Enter your username and password</h1>
+    <form id="login-form" onsubmit="return checkCredentials()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="passcode">Password:</label>
+        <input type="password" id="passcode" name="passcode" required><br><br>
+        <button type="submit">Küldés</button>
+    </form>
+    <div id="protected-content">
+        <h1>Protected Content</h1>
+        <p><a href="DNAheart.html">Tester</a></p>
+        <p><a href="https://vercel.com/cyber-administrators-projects/tgse">DevPlatform</a></p>
+    </div>
 
-                            if (enteredUsername === correctUsername && enteredPasscode === correctPasscode) {
-                                document.getElementById('protected-content').style.display = 'block';
-                                document.getElementById('login-form').style.display = 'none';
-                            } else {
-                                alert('Incorrect username or password entered!');
-                            }
-                        });
-                    </script>
-                </body>
-                </html>
-            );
-        };
+    <script>
+        function checkCredentials() {
+            var enteredUsername = document.getElementById('username').value;
+            var enteredPasscode = document.getElementById('passcode').value;
+            var correctUsername = 'Adam_Admin'; // Cseréld ki a felhasználónevet a sajátodra
+            var correctPasscode = 'Adamo_user20081026'; // Cseréld ki a jelszót a sajátodra
+
+            if (enteredUsername === correctUsername && enteredPasscode === correctPasscode) {
+                document.getElementById('protected-content').style.display = 'block';
+                document.getElementById('login-form').style.display = 'none';
+            } else {
+                alert('Incorrect username or password entered!');
+            }
+            return false; // Megakadályozza az űrlap tényleges beküldését
+        }
     </script>
 </body>
 </html>
