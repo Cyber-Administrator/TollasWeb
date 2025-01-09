@@ -28,6 +28,8 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 	height: auto;
+	display: flex;
+	justify-content: center;
 }
 
 header {
@@ -36,6 +38,7 @@ header {
     padding: 1rem 0;
     text-align: center;
 	height: auto;
+	justify-content: center;
 }
 
 nav ul {
@@ -45,21 +48,26 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: flex;
     margin: 0 1rem;
 	height: auto;
+	justify-content: center;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
 	height: auto;
+	display: flex;
+	justify-content: center;
 }
 
 main {
     padding: 2rem;
 	background-color: #FAF6FF;
 	height: auto;
+	display: flex;
+	justify-content: center;
 }
 
 section {
@@ -75,5 +83,6 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-	height: auto;
+    height: auto;
+    display:flex
 }
