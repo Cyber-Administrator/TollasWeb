@@ -51,7 +51,7 @@ nav ul li {
     display: flex;
     margin: 0 1rem;
 	height: auto;
-	justify-content: center;
+	
 }
 
 nav ul li a {
@@ -59,14 +59,14 @@ nav ul li a {
     text-decoration: none;
 	height: auto;
 	display: flex;
-	justify-content: center;
+	
 }
 
 main {
     padding: 2rem;
 	background-color: #FAF6FF;
 	height: auto;
-	display: flex;
+	
 	
 }
 
