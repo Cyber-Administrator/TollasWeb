@@ -2,6 +2,9 @@ table {
         border: 2px solid black;
         border-collapse: collapse; 
         }
+table tr,td{
+	border: 2px solid black
+}
 tr td:hover {
             background-color: #D3A3F7;
             background-color: #D3A3F7;}
