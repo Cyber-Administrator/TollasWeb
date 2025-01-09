@@ -3,6 +3,7 @@ table td {
         border-collapse: collapse; 
         }
 tr td:hover {
+            background-color: #D3A3F7;
             background-color: #D3A3F7;}
 .grid-container {
   display: grid;
@@ -28,8 +29,6 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 	height: auto;
-	display: flex;
-	
 }
 
 header {
@@ -38,8 +37,7 @@ header {
     padding: 1rem 0;
     text-align: center;
 	height: auto;
-	
-	
+	display: flex;
 }
 
 nav ul {
@@ -49,10 +47,10 @@ nav ul {
 }
 
 nav ul li {
-    display: flex;
+    display: inline;
     margin: 0 1rem;
 	height: auto;
-	
+	display: flex;
 }
 
 nav ul li a {
@@ -60,15 +58,12 @@ nav ul li a {
     text-decoration: none;
 	height: auto;
 	display: flex;
-	
 }
 
 main {
     padding: 2rem;
 	background-color: #FAF6FF;
 	height: auto;
-	
-	
 }
 
 section {
@@ -84,7 +79,6 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    height: auto;
-    display:flex
-	display: inline;
+	height: auto;
+	display: flex;
 }
