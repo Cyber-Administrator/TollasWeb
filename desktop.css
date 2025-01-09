@@ -38,6 +38,7 @@ header {
     text-align: center;
 	height: auto;
 	display: flex;
+	
 }
 
 nav ul {
@@ -57,7 +58,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
 	height: auto;
-	display: flex;
+	
 }
 
 main {
