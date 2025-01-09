@@ -29,7 +29,7 @@ body {
     background-color: #f4f4f4;
 	height: auto;
 	display: flex;
-	justify-content: center;
+	
 }
 
 header {
@@ -67,7 +67,7 @@ main {
 	background-color: #FAF6FF;
 	height: auto;
 	display: flex;
-	justify-content: center;
+	
 }
 
 section {
@@ -84,5 +84,6 @@ footer {
     width: 100%;
     bottom: 0;
     height: auto;
+    justify-content: center;
     display:flex
 }
